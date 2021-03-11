@@ -1,0 +1,143 @@
+/*Стилизация Кнопки - ПОРТФОЛИО*/
+.filter-link {
+  color: $button-color;
+  background-color: $bg-button;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+
+  text-align: center;
+  border-radius: 4px;
+  padding: 6px 22px;
+  cursor: pointer;
+  border: none;
+  transition: box-shadow $time-cubic, background-color $time-cubic, color $time-cubic;
+
+  &:hover,
+  &:focus {
+    color: $text-active-color;
+    background-color: $active-color;
+    outline: none; 
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition: box-shadow $time-cubic, background-color $time-cubic, color $time-cubic;
+  }
+
+  &.autofocus{
+    color: $button-color-active;
+    background-color: $bg-button-active;
+  }
+}
+
+/* Кнопки - Геометрия и Флекс сетка ПОРФОЛИО*/
+.filter {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter-item {
+  margin-right: 8px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+/*Разработки - Геометрия и Флекс сетка ПОРФОЛИО*/
+.program-box {
+  // padding-top: 50px;
+  // padding-bottom: 94px;
+}
+
+.program-title {
+  color: $title-color;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.program-type {
+  color: $text-color;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  margin-top: 4px;
+}
+
+/* Геометрия и Флекс сетка ПОРФОЛИО*/
+
+.program-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * #{$card-marg-size});
+  margin-left: calc(-1 * #{$card-marg-size});
+}
+  
+.program-item {
+  flex-basis: calc(100% / 3 - #{$card-marg-size});
+  margin-top: $card-marg-size;
+  margin-left: $card-marg-size;
+  transition: box-shadow $time-cubic;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition: box-shadow $time-cubic;
+  }
+
+  &:hover .program-overflow {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform $time-cubic, opacity $time-cubic;
+    overflow: auto;
+  }
+}
+
+.program-description {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #EEEEEE;
+  padding: 20px 24px;
+}
+
+/* Псевдоэлементы и амимация ПОРФОЛИО - программы*/
+.program-box {
+  position: relative;
+  overflow: hidden;
+} 
+
+.program-overflow {
+  position: absolute;
+  background-color: $program-active-bg;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform $time-cubic, opacity $time-cubic;
+}
+
+.program-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  
+  color: $text-active-color;
+  
+  padding: 63px 24px;     
+}

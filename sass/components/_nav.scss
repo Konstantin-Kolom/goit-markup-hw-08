@@ -1,0 +1,98 @@
+.nav-link {
+  color: $title-color;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition: color $time-cubic;
+
+  &:hover,
+  &:focus,
+  {
+    color: $active-color;
+    transition: color $time-cubic;
+  }
+
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.nav{
+  display: flex;
+  flex-direction: row;
+
+  .nav-line {
+    margin-right: 50px;
+  }
+
+  .nav-line:last-child{
+    margin-right: 0px;
+  }
+
+}
+
+.nav-link.active {
+  color: $active-color;
+  position: relative;
+
+  &::after {
+    content: '';
+    
+    position: absolute;
+    left: 0;
+    margin-top: 28px;
+   
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: $bg-button-active;
+    border-radius: 2px;
+    
+  }
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: row;
+
+  .contacts-line {
+    margin-left: 50px;
+  }
+
+
+   //   есть отличие -?   
+  .contacts-line:first-child {
+    margin-left: 0px;
+  }
+}
+
+.contacts-link {
+  color: $link-color;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition: color $time-cubic;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    color: $active-color;
+    transition: color $time-cubic;
+  }
+}
+
+.icon-contacts {
+  margin-right: 10px;
+  fill: currentColor;
+}

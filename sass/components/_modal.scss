@@ -1,0 +1,231 @@
+// MODAL
+/* МОДОЛЬНОЕ ОКНО - оформление*/
+.backdrop {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  
+  width: 100%;
+  height: 100%;
+    
+  background-color: $backdrop-bg;
+ 
+  opacity: 1;
+  visibility: visible;
+  transition: opacity $time-cubic;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+
+    & .modal {
+      transform: translate(-50%, -50%) scale(0.4);
+    }
+  }
+}
+
+.modal {
+  display: inline-block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  max-width: 528px;
+  width: 100%;
+  max-height: 100vh;
+  padding: 40px;
+  background-color: $modal-bg;
+  
+  overflow-y: auto;
+  transform: translate(-50%, -50%) scale(1) ;
+  transition: transform $time-cubic;
+}
+
+.modal-btn-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background-color: $button-color-active;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  outline: none; 
+  overflow: hidden;
+
+  &:hover .icon-btn-close {
+    fill: $bg-button-active; 
+    transition: fill $time-cubic;
+  }
+}
+  
+.icon-btn-close {
+  height: 11px;
+  fill: currentColor;
+  transition: fill $time-cubic;
+}
+
+/* МОДОЛЬНОЕ ОКНО - контент*/
+.modal-title {
+  font-size: 20px;
+  line-height: 1.15;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.modal-field {
+  position: relative;
+  font-size: 12px;
+  line-height: 1.17;
+  font-weight: 400;
+  color: $modal-text-color;
+}
+
+.modal-input {
+  display: block;
+  width: calc(100% - 42px);
+  height: 40px;
+  padding: 0;
+  padding-left: 42px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border $time-cubic;
+
+  &:focus  {
+    outline: none;
+    border: 1px solid $active-color;
+    transition: border $time-cubic;
+
+    & + .icon-modal {
+      fill: $active-color;
+      transition: fill $time-cubic;
+    }
+  }
+}
+
+.modal-group {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.icon-modal {
+  position: absolute;
+  display: block;
+  left: 12px;
+  top: 30px;
+  min-width: 18px;
+  height: 18px;
+  fill: $button-color;
+  transition: fill $time-cubic;
+}
+
+/* комментарий -техтерия*/
+.modal-input.comit {
+  padding: 12px 16px;
+  height: 100%;
+  width: calc(100% - 32px);
+  margin-bottom: 0;
+}
+
+textarea {
+  resize: none;
+  font-family: Roboto, sans-serif;
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 1.14;
+    font-weight: 400;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+/* чекбокс */
+.checkbox-polici {
+  position: relative;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.71;
+  font-weight: 400;
+  color: $text-color;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.contract-terms {
+  text-decoration: underline;
+  color: $active-color;
+}
+  
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  padding-left: 25px;
+
+  &:checked ~ .icon-checkbox {
+    display: block;
+    fill: $text-active-color;
+    background-color: $bg-button-active;
+    border: 2px solid $bg-button-active;
+  }
+}
+
+/* чекбокс - иконка*/
+.icon-checkbox {
+  display: inline-block;
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  left: 10px;
+  top: 50%;
+  border-radius: 2px;
+  border: 2px solid $button-color;
+  fill: $text-active-color;
+  
+  transform: translateY(-50%) ;
+  object-fit: fill;
+}
+
+/* кнопка */
+.btn-submit-modal {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.87;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 10px 55px;
+  
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: $bg-button-active;
+  
+  background-color: $bg-button-active;
+  color: $text-active-color;
+  
+  cursor: pointer;
+  overflow: visible;
+  border: none;
+}
+  
+.submit-box {
+  display: flex;
+  justify-content: center;
+}
+  

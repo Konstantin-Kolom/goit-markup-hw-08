@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" type="text/css" href="./CSS/normalize.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/common.css">
+    <!-- <link rel="stylesheet" href="./CSS/styles.css"> -->
+    <link rel="stylesheet" href="./CSS/test.css">
+
+</head>
+<body class="body">
+    <p> 
+    <b>Тестовая</b>   
+    </p>
+    <header class="header">
+        <div class="container">
+            <nav class="nav-menu">
+                <a class="logo" href="./index.html">
+                Web<span class="logo-text">Studio</span>
+                </a>
+                <ul class="nav-list">
+                    <li class="nav-line"><a class="nav-link" href="./index.html">Студия</a></li>
+                    <li class="nav-line"><a class="nav-link" href="./portfolio.html">Портфолио</a></li>
+                    <li class="nav-line"><a class="nav-link active" href="./contacts.html">Контакты</a> </li>
+                </ul>  
+            </nav>  
+            <ul class="contacts-list">
+                <li class="contacts-line">
+                    <a class="contacts-link" href="mailto:info@devstudio.com">
+                        <svg class="icon-contacts" width= "16px" height= "12px">
+                        <use href="./images/sprite.svg#envelope"></use>
+                        </svg>
+                    info@devstudio.com
+                    </a>
+                </li>
+           
+                <li class="contacts-line">
+                    <a class="contacts-link" href="tel:+380961111111">
+                        <svg class="icon-contacts" width= "10px" height= "16px">
+                        <use href="./images/sprite.svg#smartphone"></use>
+                        </svg>
+                        +38 096 111 11 11</a>
+                </li>
+            </ul>
+        </div>
+        
+    </header>
+<div>
+    <ul class="menu">
+        <li class="menu-item">
+            <a class="menu-link" href="">Меню1</a>
+            <ul class="submenu">
+                <li class="submenu-item"><a class="submenu-link" href="">Выбор1</a></li>
+                <li class="submenu-item"><a class="submenu-link" href="">Выбор1</a></li>
+                <li class="submenu-item"><a class="submenu-link" href="">Выбор1</a></li>
+            </ul>
+        </li>
+        <li class="menu-item">
+            <a class="menu-link" href="">Меню2</a></li>
+        <li class="menu-item">
+            <a class="menu-link" href="">Меню3</a></li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ut optio, nemo quam deleniti dolores sit dolore, doloremque suscipit quasi possimus commodi! Perspiciatis quia amet placeat? Alias ipsa fugit aliquid voluptates, excepturi nisi itaque sit consequuntur! Eveniet optio mollitia, ut numquam laboriosam neque ducimus commodi aspernatur amet dicta similique pariatur debitis voluptas, impedit possimus autem enim est hic officiis aliquid molestias tempora dolor atque obcaecati. Ducimus et reprehenderit esse reiciendis inventore repellat laborum aspernatur, illo a odio consequuntur quasi, sequi ratione ea libero officia maiores minus voluptatem nostrum expedita quisquam nesciunt vel! Soluta, eos placeat suscipit deserunt et provident eius.</p>
+
+</div>
+
+<!-- ФОРМА -->
+<form class="form">
+    <div class="form-fild">
+        <input type="text" class="form-input" name="user-name" id="name" placeholder="Иван Иванович">
+        <label for="name" class="form-label">Имя</label>
+        <span class="icon-form"></span>
+    </div>
+
+    <div  class="form-fild">    
+        <input type="tel" class="form-input" name="user-name" id="tel1" autofocus placeholder=" ">
+        <label for="tel1" class="form-label">Телефон</label>
+    </div>
+
+    <div  class="form-fild">
+        <label for="email">Почта</label>
+        <input type="email" name="user-name" id="email" autocomplete="off">
+    </div>
+    
+<div role="group" class="group">
+    <h2 class="group-title">Навыки</h2>
+    <ul class="topic-options">
+         <li>  
+            <input type="checkbox" name="topic" value="html" id="po1" checked>
+            <label for="po1">HTML</label>
+        </li>
+        <li>
+            <input type="checkbox" name="topic" value="css" id="po2" checked>
+           <label for="po2">CSSL</label>
+        </li>
+        <li>
+           <input type="checkbox" name="topic" value="js" id="po3">
+           <label for="po3">JS</label> 
+        </li>
+    </ul>
+</div>
+     
+<div role="group" class="group">
+    <h2 class="group-title">Уровень знаний</h2>
+    <u>
+        <li class="radio-options">
+            <input type="radio" name="level" value="jun" id="prof1" checked>
+             <label for="prof1">Junior</label>
+        </li>
+        <li>
+            <input type="radio" name="level" value="mid" id="prof2">
+            <label for="prof2">Middle</label>
+        </li>
+        <li>
+            <input type="radio" name="level" value="Sen" id="prof3">
+            <label for="prof3">Senior</label>
+        </li>
+    </u>
+</div>
+    
+<div class="form-fild">
+    <label for="fil1">Загрузка файла</label>
+    <input type="file" name="pdf" value="fil1">
+</div>
+
+<div  class="form-fild">
+    <label for="data">Дата</label>
+    <input type="date" name="user-name" id="data" class="date">
+</div>
+
+<div class="form-fild">
+    <label for="comit1">Комментарий</label>
+    <textarea name="comit" id="comit1" rows="10" placeholder="Оставьте комментарий"></textarea>
+</div>
+
+    <br>
+    <input type="checkbox" name="police" id="police">
+    <label for="police">Согасен на все</label>
+
+    <br>
+    <button type="submit">Отправить</button>
+</form>
+
+
+<!-- Скрипт для формы -->
+<script>
+    (() => {
+        document
+        .querySelector('.js-speaker-form')
+        .addEventListener('submit', e => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+                console.log (`${name}: ${value}`),
+            );
+        });
+    })();
+</script>
+
+</body>
+
+</html>
