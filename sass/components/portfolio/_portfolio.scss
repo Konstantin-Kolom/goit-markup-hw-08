@@ -8,7 +8,7 @@
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
-
+  
   text-align: center;
   border-radius: 4px;
   padding: 6px 22px;
@@ -16,6 +16,7 @@
   border: none;
   transition: box-shadow $time-cubic, background-color $time-cubic, color $time-cubic;
 
+ 
   &:hover,
   &:focus {
     color: $text-active-color;
@@ -33,18 +34,43 @@
 
 /* Кнопки - Геометрия и Флекс сетка ПОРФОЛИО*/
 .filter {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .filter-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  margin-top: -8px;
+  margin-left: -8px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .filter-item {
-  margin-right: 8px;
+  margin-top: 8px;
+  margin-left: 8px;
+  // margin-right: 0px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 8px;
+  }
 
   &:last-child {
     margin-right: 0px;
@@ -76,19 +102,27 @@
 }
 
 /* Геометрия и Флекс сетка ПОРФОЛИО*/
-
 .program-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * #{$card-marg-size});
-  margin-left: calc(-1 * #{$card-marg-size});
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * #{$card-marg-size});
+    margin-left: calc(-1 * #{$card-marg-size});
+  }
 }
   
 .program-item {
-  flex-basis: calc(100% / 3 - #{$card-marg-size});
-  margin-top: $card-marg-size;
-  margin-left: $card-marg-size;
+  margin-top: 30px;
   transition: box-shadow $time-cubic;
+
+  @media screen and (min-width: 768px) {
+    margin-left: $card-marg-size;
+    flex-basis: calc(100% / 2 - #{$card-marg-size});
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - #{$card-marg-size});
+  }
 
   &:hover,
   &:focus {
@@ -105,11 +139,21 @@
   }
 }
 
+.progpam-card {
+  // display: block;
+  width: 100%;
+}
+
 .program-description {
   border-style: solid;
   border-width: 1px;
   border-color: #EEEEEE;
   padding: 20px 24px;
+}
+
+.progpam-foto {
+  width: 100%;
+  object-fit: fill;
 }
 
 /* Псевдоэлементы и амимация ПОРФОЛИО - программы*/

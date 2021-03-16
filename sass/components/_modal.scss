@@ -32,7 +32,7 @@
   top: 50%;
   left: 50%;
   
-  max-width: 528px;
+  max-width: 450px;
   width: 100%;
   max-height: 100vh;
   padding: 40px;
@@ -41,6 +41,10 @@
   overflow-y: auto;
   transform: translate(-50%, -50%) scale(1) ;
   transition: transform $time-cubic;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 528px;
+  }
 }
 
 .modal-btn-close {
@@ -150,14 +154,20 @@ textarea {
   position: relative;
   display: block;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   font-weight: 400;
   color: $text-color;
   margin-top: 20px;
   margin-bottom: 30px;
-  padding-left: 30px;
+  padding-left: 21px;
   cursor: pointer;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.17;
+    padding-left: 30px;
+  }
 }
 
 .contract-terms {
@@ -193,14 +203,19 @@ textarea {
   position: absolute;
   width: 16px;
   height: 15px;
-  left: 10px;
+  left: 0px;
   top: 50%;
   border-radius: 2px;
   border: 2px solid $button-color;
   fill: $text-active-color;
+  box-sizing: border-box;
   
   transform: translateY(-50%) ;
   object-fit: fill;
+
+  @media screen and (min-width: 1200px) {
+    left: 10px;
+  }
 }
 
 /* кнопка */

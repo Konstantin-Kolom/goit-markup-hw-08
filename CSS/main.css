@@ -275,7 +275,7 @@ p {
   margin-left: auto;
   margin-right: auto;
   max-width: 450px;
-  padding: 15px 15px;
+  padding: 0px 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -323,6 +323,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 15px 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -426,14 +427,25 @@ a {
 
 .nav-link.active::after {
   content: '';
-  position: absolute;
-  left: 0;
-  margin-top: 28px;
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: #2196F3;
-  border-radius: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-link.active::after {
+    position: absolute;
+    left: 0;
+    margin-top: 29px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #2196F3;
+    border-radius: 2px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-link.active::after {
+    margin-top: 27px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -543,6 +555,7 @@ a {
 
 .menu-nav.is-open {
   display: block;
+  z-index: 20;
 }
 
 @media screen and (min-width: 768px) {
@@ -674,9 +687,9 @@ a {
   color: #2196F3;
   text-decoration: none;
   font-family: Raleway, sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.17;
 }
 
 @media screen and (min-width: 768px) {
@@ -688,6 +701,9 @@ a {
 @media screen and (min-width: 1200px) {
   .logo {
     margin-right: 93px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
   }
 }
 
@@ -1212,10 +1228,8 @@ a {
   margin-right: 0;
 }
 
-@media screen and (min-width: 480px) {
-  .footer-box {
-    text-align: center;
-  }
+.footer-box {
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -1225,10 +1239,11 @@ a {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    text-align: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -ms-flex-preferred-size: calc(100% / 2);
+        flex-basis: calc(100% / 2);
   }
 }
 
@@ -1255,11 +1270,23 @@ a {
 }
 
 .footer-list {
-  margin-top: 9px;
+  margin-top: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-list {
+    margin-top: 9px;
+  }
 }
 
 .footer-item:last-child {
-  margin-top: 9px;
+  margin-top: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-item:last-child {
+    margin-top: 9px;
+  }
 }
 
 .footer-link {
@@ -1272,8 +1299,21 @@ a {
 }
 
 .join-foter {
-  padding: 0;
-  margin-left: 70px;
+  padding-top: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .join-foter {
+    padding-top: 0;
+    padding-left: 165px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .join-foter {
+    padding: 0;
+    margin-left: 70px;
+  }
 }
 
 .join-title {
@@ -1328,7 +1368,7 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   color: #FFFFFF;
-  margin-left: 93px;
+  padding-top: 60px;
 }
 
 .footer-form input {
@@ -1344,6 +1384,8 @@ a {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    margin-left: 93px;
+    padding-top: 0px;
   }
 }
 
@@ -1389,11 +1431,19 @@ a {
   color: #FFFFFF;
   background-color: #2196F3;
   padding: 10px 13px 10px 29px;
-  margin-left: 12px;
-  margin-top: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
   border-radius: 4px;
   border-color: #2196F3;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form-btn {
+    margin-left: 12px;
+    margin-top: 35px;
+  }
 }
 
 .footer-btn-icon {
@@ -1436,7 +1486,7 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  max-width: 528px;
+  max-width: 450px;
   width: 100%;
   max-height: 100vh;
   padding: 40px;
@@ -1448,6 +1498,12 @@ a {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+  }
 }
 
 .modal-btn-close {
@@ -1585,14 +1641,22 @@ textarea::placeholder {
   position: relative;
   display: block;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   font-weight: 400;
   color: #757575;
   margin-top: 20px;
   margin-bottom: 30px;
-  padding-left: 30px;
+  padding-left: 21px;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox-polici {
+    font-size: 14px;
+    line-height: 1.17;
+    padding-left: 30px;
+  }
 }
 
 .contract-terms {
@@ -1628,15 +1692,23 @@ textarea::placeholder {
   position: absolute;
   width: 16px;
   height: 15px;
-  left: 10px;
+  left: 0px;
   top: 50%;
   border-radius: 2px;
   border: 2px solid #212121;
   fill: #FFFFFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   -o-object-fit: fill;
      object-fit: fill;
+}
+
+@media screen and (min-width: 1200px) {
+  .icon-checkbox {
+    left: 10px;
+  }
 }
 
 /* кнопка */
@@ -1707,22 +1779,55 @@ textarea::placeholder {
 
 /* Кнопки - Геометрия и Флекс сетка ПОРФОЛИО*/
 .filter {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .filter {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .filter-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 40px;
+  margin-top: -8px;
+  margin-left: -8px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter-list {
+    margin-bottom: 50px;
+  }
 }
 
 .filter-item {
-  margin-right: 8px;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter-item {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 8px;
+  }
 }
 
 .filter-item:last-child {
@@ -1749,25 +1854,39 @@ textarea::placeholder {
 }
 
 /* Геометрия и Флекс сетка ПОРФОЛИО*/
-.program-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-top: calc(-1 * 30px);
-  margin-left: calc(-1 * 30px);
+@media screen and (min-width: 768px) {
+  .program-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: calc(-1 * 30px);
+    margin-left: calc(-1 * 30px);
+  }
 }
 
 .program-item {
-  -ms-flex-preferred-size: calc(100% / 3 - 30px);
-      flex-basis: calc(100% / 3 - 30px);
   margin-top: 30px;
-  margin-left: 30px;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .program-item {
+    margin-left: 30px;
+    -ms-flex-preferred-size: calc(100% / 2 - 30px);
+        flex-basis: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .program-item {
+    -ms-flex-preferred-size: calc(100% / 3 - 30px);
+        flex-basis: calc(100% / 3 - 30px);
+  }
 }
 
 .program-item:hover, .program-item:focus {
@@ -1791,11 +1910,21 @@ textarea::placeholder {
   overflow: auto;
 }
 
+.progpam-card {
+  width: 100%;
+}
+
 .program-description {
   border-style: solid;
   border-width: 1px;
   border-color: #EEEEEE;
   padding: 20px 24px;
+}
+
+.progpam-foto {
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 /* Псевдоэлементы и амимация ПОРФОЛИО - программы*/
