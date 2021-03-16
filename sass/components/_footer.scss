@@ -10,8 +10,24 @@
 }
 
 .footer-box {
-  display: flex;
-  align-items: baseline;
+  @media screen and (min-width: 480px) {
+    // display: flex;
+    // align-items: baseline;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    // align-items: baseline;
+  }
+  
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .address {
@@ -89,8 +105,8 @@
 }
 //  Форма - подписка, FOOTER
 .footer-form {
-  display: inline-flex;
-  justify-content: flex-start;
+  // display: inline-flex;
+  // justify-content: flex-start;
   font-size: 14px;
   line-height: 1.14;
   font-weight: 700;
@@ -102,6 +118,11 @@
   input {
     color: $text-active-color;
     background-color: $bg-footer;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: inline-flex;
+    justify-content: flex-start;
   }
 }
 

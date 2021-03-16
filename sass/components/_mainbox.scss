@@ -50,21 +50,45 @@
 
 .section-description{
   >.container {
-    padding-top: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 94px;
+      padding-bottom: 0px;
+    }
   }
 }
 
 .description-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * #{$description-margsize});
-  margin-left: calc(-1 * #{$description-margsize});
+  // display: flex;
+  // flex-wrap: wrap;
+
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * #{$description-margsize});
+    margin-left: calc(-1 * #{$description-margsize});
+  }
+
 }
 
 .description-item {
-  flex-basis: calc(100% / 4 - #{$description-margsize});
-  margin-left: #{$description-margsize};
-  margin-top: #{$description-margsize};
+  padding-bottom: 30px;
+
+  &:last-child {
+    padding-bottom: 0px;
+  }
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - #{$description-margsize});
+    margin-left: #{$description-margsize};
+    margin-top: #{$description-margsize};
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 4 - #{$description-margsize});
+  }
 
   .icon {
     margin-top: 25px;
@@ -78,8 +102,11 @@
   justify-content: center;
   background-color: $bg-frame-description;
   border-radius: 4px;
-  max-width: 270px;
-  max-height: 120px;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 270px;
+    max-height: 120px;
+  }
 }
 
 .title-description {
@@ -106,6 +133,10 @@
   .container {
     padding-top: 94px;
     padding-bottom: 94px;
+
+    @media screen and (max-width: 1200px){
+      display: none;
+    }
   }
 }
 
@@ -159,57 +190,100 @@
 
 
 
-
 // Наша команда
 .staff {
-  > .container {
-    padding-top: 94px;
-    padding-bottom: 94px;
+  .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
   }
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #F5F4FA;;
+  background-color: #F5F4FA;
 }
 
 .staff-title {
   color: var(--title-color);
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.67;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.67;
+    margin-bottom: 50px;
+  }
 }
 
-// .staff-box {
-//   display: inline-block;
-//   margin-top: 50px;
-// }
-
 .staff-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * #{$card-marg-size});
-  margin-left: calc(-1 * #{$card-marg-size});
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * #{$card-marg-size});
+    margin-left: calc(-1 * #{$card-marg-size});
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * #{$card-marg-size});
+    margin-left: calc(-1 * #{$card-marg-size});
+  }
 }
 
 .staff-item {
-  flex-basis: calc(100% / 4 - #{$card-marg-size});
-  margin-left: $card-marg-size;
+  // margin-left: $card-marg-size;
   margin-top: $card-marg-size;
   background-color: #FFFFFF;
   border-radius: 0px 0px 4px 4px;
   box-shadow: $box-shadow-staff;
-  max-width: 270px;
+  max-width: 450px;
+  
+  @media screen and (min-width: 768px) {
+    margin-left: $card-marg-size;
+    flex-basis: calc(100% / 2 - #{$card-marg-size});
+    max-width: 354px;
+  }
+  
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 4 - #{$card-marg-size});
+    max-width: 270px;
+  }
 }
 
 .staff-tumb {
-  width: 270px;
+  max-width: 450px;
   height: auto;
+
+  @media screen and (min-width: 768px) {
+    max-width: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 270px;
+  }
 }
 
 .staff-description {
-  padding: 30px 32px;
+  // padding: 30px 122px 24px 122px;
+  padding-top: 30px;
+  padding-bottom: 24px;
+  
+  @media screen and (min-width: 768px) {
+    padding: 30px 74px 24px 74px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 30px 32px;
+  }
 }
 
 .staff-name {
@@ -231,8 +305,21 @@
 
 .contacts-box {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 16px;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.contacts-item {
+  padding-right: 10px;
+
+  &:last-child {
+    padding-right: 0px;
+  }
 }
 
 .contacts-icon {
@@ -243,13 +330,14 @@
   border-radius: 50%;
   color: $bg-icon;
   transition: color $time-cubic, background-color $time-cubic;
-
+  
   &:hover,
   &:focus {
     background-color: $bg-icon-active;
     color: $bg-frame-description;
     transition: color $time-cubic, background-color $time-cubic;
   }
+ 
 }
 
 .icon-staff {
@@ -257,25 +345,41 @@
 }
 
 
+
 // КЛИЕНТЫ
 .clients {
   .container {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 94px;
+      padding-bottom: 94px
+    }
   }
+
 }
 
 .title-clients {
-  color: var(--title-color);
+  color: $title-color;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.67;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.67;
+  }
 }
 
 .clients-box {
-  display: inline-block;
-  margin-top: 50px;
+  // display: inline-block;
+  margin-top: 30px;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 50px;
+  }
 }
 
 .clients-list {
@@ -289,15 +393,27 @@
 .clients-item {
   display: flex;
   justify-content: center;
-  flex-basis: calc(100% / 6 - #{$clients-marg-size});
+  flex-basis: calc(100% / 2 - #{$clients-marg-size});
   margin-left: $clients-marg-size;
   margin-top: $clients-marg-size;
   padding: 0;
+  max-width: 210px;
+  height: 90px;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 3 - #{$clients-marg-size});
+    max-width: 226px;
+    // height: 90px; 
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 6 - #{$clients-marg-size});
+  }
 }
 
 .clients-link {
-  width: 166px;
-  height: 86px;
+  width: 100%;
+  height: 100%;
 
   display: flex;
   justify-content: center;
@@ -310,6 +426,16 @@
     border-color: $bg-button-active;
     color: $bg-button-active;
     transition: color $time-cubic, border-color $time-cubic;
+  }
+
+  @media screen and (min-width: 768px) {
+    // width: 170px;
+    // height: 90px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 166px;
+    height: 86px;
   }
 }
 

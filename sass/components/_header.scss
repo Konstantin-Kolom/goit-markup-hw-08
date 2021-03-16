@@ -1,12 +1,28 @@
 .header {
+  position: relative;
   border-bottom: 1px solid #ECECEC;
 
   .container{
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-top: 24px;
-    padding-bottom: 25px;
+     
+    @media screen and  (min-width: 768px){
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 21px;
+      padding-bottom: 21px;
+    }
+
+    @media screen and  (min-width: 1200px){
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 24px;
+      padding-bottom: 25px;
+    }
   }
 }

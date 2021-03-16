@@ -20,11 +20,15 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 
 .nav{
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
 
   .nav-line {
@@ -58,16 +62,33 @@
 }
 
 .contacts-list {
-  display: flex;
-  flex-direction: row;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+  }
 
   .contacts-line {
-    margin-left: 50px;
+    @media screen and (min-width: 768px) {
+      margin-top: 10px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-left: 50px;
+      margin-top: 0px;
+    }
   }
 
 
    //   есть отличие -?   
   .contacts-line:first-child {
+
+    @media screen and (min-width: 768px) {
+      margin-top: 0px;
+    }
+
     margin-left: 0px;
   }
 }
@@ -90,9 +111,173 @@
     color: $active-color;
     transition: color $time-cubic;
   }
+
+  @media screen and (min-width: 768px) {
+    justify-content: left;
+  }
+
+  @media screen and (min-width: 1200px) {
+    // display: flex;
+    justify-content: center;
+    // align-items: center;
+  }
 }
 
 .icon-contacts {
-  margin-right: 10px;
+  display: none;
+
+  @media screen and (min-width: 480px) {
+    display: block;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}
+
+// Меню для мобильного
+.menu-nav {
+  display: none;
+  position: absolute;
+  width: calc(100% - 80px);
+  background-color: $modal-bg;
+  padding: 48px 40px 48px 40px;
+  left: 0;
+  top: 100%;
+  // height: 100vh;
+
+  &.is-open {
+    display: block;
+  }
+ 
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-line {
+  margin-bottom: 32px;
+
+  &:last-child {
+    // margin-bottom: 302px;
+  }
+}
+
+.menu-link {
+  display: block;
+
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+
+  color: $title-color;
+  text-decoration: none;
+
+  transition: color $time-cubic;
+
+  &:hover,
+  &:focus,
+  {
+    color: $active-color;
+    transition: color $time-cubic;
+  }
+}
+
+.menu-link.active {
+  color: $active-color;
+  position: relative;
+}
+
+.menu-contacts-line {
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 64px;
+  }
+}
+
+.menu-contacts-link {
+  color: $link-color;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  transition: color $time-cubic;
+
+  &:hover,
+  &:focus {
+    color: $active-color;
+    transition: color $time-cubic;
+  }
+
+  &.tell {
+    color: $active-color;
+    font-size: 34px;
+    line-height: 1.17;
+
+  }
+}
+
+.menu-links-list {
+  display: flex;
+  
+}
+
+.menu-links-line {
+  padding-right: 10px;
+  padding-left: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+ 
+  &:last-child {
+    border: none;
+    padding-right: 0px;
+  }
+
+  &:first-child {
+    padding-left: 0px;
+  }
+}
+
+
+.links-list{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  color: $active-color;
+}
+
+// кнопка меню
+.btn-menu {
+  display: inline-flex;
+  background-color: transparent;
+  border: transparent;
+  padding: 0;
   fill: currentColor;
+
+  & .icon-cross {
+    display: none;
+  }
+  
+  &:hover,
+  :focus {
+    fill: $active-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.btn-menu.is-open {
+  & .icon-cross {
+    display: block;
+  }
+
+  & .icon-menu {
+    display: none;
+  }
+
+  // .#menu-nav {
+  //   display: block;
+  // }
 }
