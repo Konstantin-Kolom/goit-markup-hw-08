@@ -9,7 +9,7 @@
   padding: 48px 40px 48px 40px;
   left: 0;
   top: 0;
-  transform: translateX(100%);
+  transform: translateX(150%);
   transition: transform $time-cubic;
   
   &.is-open {
@@ -19,7 +19,7 @@
     transform: translateX(0);
     transition: transform $time-cubic;
   }
- 
+
   @media screen and (min-width: 768px) {
     display: none;
   }
