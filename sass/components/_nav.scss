@@ -85,8 +85,6 @@
     }
   }
 
-
-   //   есть отличие -?   
   .contacts-line:first-child {
 
     @media screen and (min-width: 768px) {
@@ -137,11 +135,14 @@
   }
 }
 
+
+
 // Меню для мобильного
 .menu-nav {
   display: none;
   position: absolute;
   width: calc(100% - 80px);
+  max-height: 796px;
   background-color: $modal-bg;
   padding: 48px 40px 48px 40px;
   left: 0;
@@ -158,11 +159,15 @@
   }
 }
 
+.menu-list {
+  // padding-bottom: 302px;
+}
+
 .menu-line {
   margin-bottom: 32px;
 
   &:last-child {
-    // margin-bottom: 302px;
+    margin-bottom: 0px;
   }
 }
 
@@ -192,11 +197,15 @@
   position: relative;
 }
 
+.menu-contacts-list {
+  margin-bottom: 64px;
+}
+
 .menu-contacts-line {
   margin-bottom: 32px;
 
   &:last-child {
-    margin-bottom: 64px;
+    margin-bottom: 0px;
   }
 }
 
@@ -225,10 +234,11 @@
 
 .menu-links-list {
   display: flex;
-  
+  // flex-wrap: wrap;
 }
 
 .menu-links-line {
+  display: block;
   padding-right: 10px;
   padding-left: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
@@ -250,6 +260,8 @@
   line-height: 1.22;
   color: $active-color;
 }
+
+
 
 // кнопка меню
 .btn-menu {

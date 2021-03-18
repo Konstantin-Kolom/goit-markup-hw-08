@@ -235,6 +235,10 @@ summary {
   }
 }
 
+.body.modal-open {
+  overflow: hidden;
+}
+
 li {
   list-style-type: none;
   margin-left: 0;
@@ -547,6 +551,7 @@ a {
   display: none;
   position: absolute;
   width: calc(100% - 80px);
+  max-height: 796px;
   background-color: #FFFFFF;
   padding: 48px 40px 48px 40px;
   left: 0;
@@ -566,6 +571,10 @@ a {
 
 .menu-line {
   margin-bottom: 32px;
+}
+
+.menu-line:last-child {
+  margin-bottom: 0px;
 }
 
 .menu-link {
@@ -591,12 +600,16 @@ a {
   position: relative;
 }
 
+.menu-contacts-list {
+  margin-bottom: 64px;
+}
+
 .menu-contacts-line {
   margin-bottom: 32px;
 }
 
 .menu-contacts-line:last-child {
-  margin-bottom: 64px;
+  margin-bottom: 0px;
 }
 
 .menu-contacts-link {
@@ -629,6 +642,7 @@ a {
 }
 
 .menu-links-line {
+  display: block;
   padding-right: 10px;
   padding-left: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
@@ -998,20 +1012,27 @@ a {
 }
 
 .staff-tumb {
-  max-width: 450px;
-  height: auto;
+  height: 460px;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
   .staff-tumb {
-    max-width: 354px;
+    height: 374px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .staff-tumb {
-    max-width: 270px;
+    height: 260px;
   }
+}
+
+.staff-icon {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .staff-description {
@@ -1457,7 +1478,7 @@ a {
 /* МОДОЛЬНОЕ ОКНО - оформление*/
 .backdrop {
   position: fixed;
-  z-index: 10;
+  z-index: 50;
   top: 0;
   left: 0;
   width: 100%;
@@ -1911,10 +1932,21 @@ textarea::placeholder {
 }
 
 .progpam-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
+  height: 100%;
 }
 
 .program-description {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   border-style: solid;
   border-width: 1px;
   border-color: #EEEEEE;
@@ -1923,6 +1955,7 @@ textarea::placeholder {
 
 .progpam-foto {
   width: 100%;
+  height: 100%;
   -o-object-fit: fill;
      object-fit: fill;
 }
