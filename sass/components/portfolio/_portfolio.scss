@@ -114,14 +114,23 @@
 .program-item {
   margin-top: 30px;
   transition: box-shadow $time-cubic;
+  
+  &:first-child {
+    margin-top: 0px;
+  }
 
   @media screen and (min-width: 768px) {
     margin-left: $card-marg-size;
     flex-basis: calc(100% / 2 - #{$card-marg-size});
+
+    &:first-child {
+      margin-top: 30px;
+    }
   }
 
   @media screen and (min-width: 1200px) {
     flex-basis: calc(100% / 3 - #{$card-marg-size});
+   
   }
 
   &:hover,
@@ -158,13 +167,15 @@
 .progpam-foto {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
+
 }
 
 /* Псевдоэлементы и амимация ПОРФОЛИО - программы*/
 .program-box {
   position: relative;
   overflow: hidden;
+  height: 294px;
 } 
 
 .program-overflow {
