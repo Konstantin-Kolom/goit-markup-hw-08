@@ -1,5 +1,5 @@
 // Меню для мобильного
-.menu-container {
+.menu__container {
   position: fixed;
   box-sizing: border-box;
   width: 100vw;
@@ -24,12 +24,12 @@
     display: none;
   }
 
-  > .menu-list {
+  > .menu__list {
     flex-grow: 1;
   }
 }
 
-.menu-line {
+.menu__line {
   margin-bottom: 32px;
 
   &:last-child {
@@ -63,15 +63,15 @@
   }
 }
 
-.menu-contacts-list {
+.menu__contacts-list {
   margin-bottom: 64px;
 }
 
-.menu-contacts-line:not(last-child) {
+.menu__contacts-line:not(last-child) {
   margin-bottom: 32px;
 }
 
-.menu-contacts-link {
+.menu__contacts-link {
   color: $link-color;
   text-decoration: none;
   font-weight: 500;
@@ -94,11 +94,11 @@
   }
 }
 
-.menu-links-list {
+.menu__links-list {
   display: flex;
 }
 
-.menu-links-line {
+.menu__links-line {
   display: block;
   padding-right: 10px;
   padding-left: 10px;
@@ -145,7 +145,7 @@
   }
 }
 
-.menu-container {
+.menu__container {
   & .menu-toggle {
     position: absolute;
     top: 25px;

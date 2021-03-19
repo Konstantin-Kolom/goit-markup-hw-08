@@ -1,5 +1,5 @@
 // ГЕРОЙ
-.section-hero {
+.section__hero {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -56,7 +56,7 @@
   }
 }
 
-.title-hero {
+.hero__title {
   color: $text-active-color;
   font-weight: 900;
   font-size: 26px;
@@ -70,7 +70,7 @@
   }
 }
 
-.order-button {
+.order__button {
   text-align: center;
   display: inline-block;
   color: $text-active-color;
@@ -92,7 +92,7 @@
 
 // Наши достоинства
 
-.section-description{
+.section__description{
   >.container {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -396,7 +396,11 @@
  
 }
 
-.icon-staff {
+.contacts-icon {
+  fill: currentColor;
+}
+
+.join__icon{
   fill: currentColor;
 }
 
@@ -416,7 +420,7 @@
 
 }
 
-.clients-title {
+.clients__title {
   color: $title-color;
   font-weight: 700;
   font-size: 28px;
@@ -440,7 +444,7 @@
   }
 }
 
-.clients-list {
+.clients__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;  
